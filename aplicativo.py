@@ -40,7 +40,11 @@ st.markdown(\"\"\"
 \"\"\", unsafe_allow_html=True)
 
 # Áudio ambiente com autoplay e loop
-st.markdown(\"\"\"{audio_html_final}\"\"\", unsafe_allow_html=True)
+st.markdown(\"\"\"
+<audio autoplay loop>
+    <source src="data:audio/mp3;base64,AQUI_VAI_TODO_O_BASE64" type="audio/mp3">
+</audio>
+\"\"\", unsafe_allow_html=True)
 
 st.markdown("## 🚦 Obra mal planejada trava o trânsito na Via 9, no Recreio")
 st.markdown("#### Rotatória e radar de 40km/h colocados no fim da Avenida Balthazar da Silveira estão causando engarrafamentos diários nos horários de pico.")
