@@ -2,29 +2,33 @@ import streamlit as st
 
 st.set_page_config(page_title="Trânsito na Via 9", layout="wide")
 
-# Estilo visual com fundo de asfalto e texto claro
+# CSS: Fundo com textura de asfalto e texto claro dentro de container escuro
 st.markdown("""
     <style>
-        body {
-            background-image: url('https://i.imgur.com/IiK6p0z.jpg');
+        .stApp {
+            background: url('textura_asfalto.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
+        }
+        .main-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin: 1rem;
         }
         h1, h2, h3, h4, h5, h6, p, div, span {
-            color: #f1f1f1 !important;
+            color: #ffffff !important;
         }
-        .reportview-container .main {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 1.5rem;
-            border-radius: 10px;
+        audio {
+            margin-bottom: 2rem;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# Áudio ambiente com streamlit
+# Áudio ambiente
 st.audio("150efeitosonorodetrnsitonacidadecombuzinasepessoas.mp3", loop=True)
+
+# Conteúdo
+st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
 st.markdown("## 🚦 Obra mal planejada trava o trânsito na Via 9, no Recreio")
 st.markdown("#### Rotatória e radar de 40km/h colocados no fim da Avenida Balthazar da Silveira estão causando engarrafamentos diários nos horários de pico.")
@@ -42,9 +46,9 @@ st.video("https://www.youtube.com/watch?v=nRz0HaSwQ_M")
 st.video("https://www.youtube.com/watch?v=hedAndSmwdk")
 
 st.markdown("### 📍 Onde fica esse trecho?")
-st.image('mapa_recreio_geral.png', caption='🗺️ Mapa geral do Recreio dos Bandeirantes', use_container_width=True)
-st.image('mapa_balthazar1.png', caption='📌 Trecho da Av. Balthazar da Silveira próximo à Salvador Allende', use_container_width=True)
-st.image('mapa_balthazar2.png', caption='📍 Rotatória no fim da Via 9 próxima ao Terminal Recreio', use_container_width=True)
+st.image("mapa_recreio_geral.png", caption="🗺️ Mapa geral do Recreio dos Bandeirantes", use_container_width=True)
+st.image("mapa_balthazar1.png", caption="📌 Trecho da Av. Balthazar da Silveira próximo à Salvador Allende", use_container_width=True)
+st.image("mapa_balthazar2.png", caption="📍 Rotatória no fim da Via 9 próxima ao Terminal Recreio", use_container_width=True)
 
 st.markdown("### 🚗 O impacto no dia a dia")
 st.write("""
@@ -57,7 +61,6 @@ Do outro lado, quem vem da Avenida Salvador Allende encontra uma placa de “PAR
 
 Conversei com **Inácio Soares**, um amigo que trabalha como motorista de aplicativo e conhece bem o local. Ele compartilhou suas impressões:
 """)
-
 st.markdown("> “Muita gente fica parada por vários minutos sem necessidade. A gente já reduz a velocidade por causa do radar, aí tem que esperar ainda mais. Enquanto isso, quase não vem carro da outra pista.” – Inácio Soares, motorista de aplicativo")
 
 st.markdown("### 🎙️ Entrevista com Inácio Soares")
@@ -95,3 +98,5 @@ As entrevistas, vídeos e registros feitos durante este trabalho mostram clarame
 
 st.markdown("---")
 st.markdown("📝 Matéria multimídia produzida por **Bruno Alexandre Rodrigues** — estudante de Comunicação Digital, na disciplina Jornalismo Digital 2025.1")
+
+st.markdown('</div>', unsafe_allow_html=True)
