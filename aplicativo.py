@@ -1,26 +1,39 @@
 import streamlit as st
 
+import base64
+
+# Função para converter imagem para base64
+def get_base64_of_image(path):
+    with open(path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Converte imagem de asfalto para base64
+asfalto_base64 = get_base64_of_image("textura_asfalto.jpg")
+
 # Layout da página
 st.set_page_config(page_title="Trânsito na Via 9", layout="wide")
 
-# CSS: fundo de asfalto e texto branco com sombra para contraste
-st.markdown("""
+# CSS com fundo de asfalto + texto branco com sombra
+st.markdown(f"""
     <style>
-        .stApp {
-            background-image: url('textura_asfalto.jpg');
+        .stApp {{
+            background-image: url("data:image/jpg;base64,{asfalto_base64}");
             background-size: cover;
             background-attachment: fixed;
-        }
-        h1, h2, h3, h4, h5, h6, p, div, span {
+            background-position: center;
+        }}
+        h1, h2, h3, h4, h5, h6, p, div, span {{
             color: white !important;
             text-shadow: 1px 1px 3px black;
-        }
-        audio {
+        }}
+        audio {{
             margin-bottom: 2rem;
-        }
+        }}
     </style>
 """, unsafe_allow_html=True)
 
+     
 # Áudio ambiente
 st.audio("150efeitosonorodetrnsitonacidadecombuzinasepessoas.mp3", loop=True)
 
