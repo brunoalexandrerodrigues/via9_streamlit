@@ -2,47 +2,80 @@ import streamlit as st
 
 st.set_page_config(page_title="Trânsito na Via 9", layout="wide")
 
-st.markdown("<h1 style='text-align: center;'>Caos na Via 9: como uma obra transformou o trânsito no Recreio</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'>Radar, rotatória e sinalização confusa geram congestionamentos todos os dias</h4>", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .centered {
+            text-align: center;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #f63366;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-#st.audio('sons_transito_final.mp3', format='audio/mp3', start_time=0)
+st.markdown("<h1 class='centered'>🚦 Trânsito travado na Via 9</h1>", unsafe_allow_html=True)
+st.markdown("<h4 class='centered'>Radar, rotatória e sinalização confusa travam o bairro do Recreio nos horários de pico</h4>", unsafe_allow_html=True)
 
-st.markdown("### O que está acontecendo?")
-st.write("""
-A Avenida Balthazar da Silveira, a famosa Via 9, é uma das principais rotas de entrada e saída do Recreio dos Bandeirantes. 
-Uma obra recente da prefeitura colocou uma rotatória e um radar de 40km/h no final da via, e desde então o trânsito virou um problema sério.
-""")
+st.markdown("---")
 
-st.markdown("### Veja como está o trânsito de verdade")
-st.write("Gravamos dois vídeos para mostrar como o trânsito trava na Via 9:")
+# st.audio() está desativado para evitar erro
+# st.audio('sons_transito_final.mp3', format='audio/mp3', start_time=0)
+
+st.markdown("### 📍 O que está acontecendo?")
+st.markdown("""
+<div class='highlight'>
+A Avenida Balthazar da Silveira, conhecida como Via 9, é uma das principais saídas e entradas do bairro do Recreio dos Bandeirantes. 
+Mas uma obra recente — com a instalação de uma rotatória e um radar de 40km/h — vem transformando a rotina dos motoristas.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("### 🎥 O trânsito na prática")
+st.markdown("Veja abaixo dois vídeos gravados durante horários de pico na Via 9:")
+
 st.video("https://www.youtube.com/watch?v=nRz0HaSwQ_M")
 st.video("https://www.youtube.com/watch?v=hedAndSmwdk")
 
-st.markdown("### Onde fica esse trecho?")
-st.image('mapa_recreio_geral.png', caption='Mapa geral do Recreio dos Bandeirantes', use_container_width=True)
-st.image('mapa_balthazar1.png', caption='Avenida Alfredo Balthazar da Silveira e acesso à Salvador Allende', use_container_width=True)
-st.image('mapa_balthazar2.png', caption='Rotatória no fim da Via 9 próxima ao Terminal Recreio', use_container_width=True)
+st.markdown("### 🗺️ Onde fica esse trecho?")
+st.markdown("Abaixo estão os mapas para visualizar melhor a região impactada pela obra:")
 
+st.image('mapa_recreio_geral.png', caption='🗺️ Mapa geral do Recreio dos Bandeirantes', use_container_width=True)
+st.image('mapa_balthazar1.png', caption='📌 Trecho da Av. Balthazar da Silveira próximo à Salvador Allende', use_container_width=True)
+st.image('mapa_balthazar2.png', caption='📍 Rotatória no fim da Via 9, em frente ao Terminal Recreio BRT', use_container_width=True)
 
-st.markdown("### Fiscalização intensa e fluxo parado")
+st.markdown("### 🚔 Fiscalização demais, fluidez de menos")
+st.markdown("""
+<div class='highlight'>
+O Rio de Janeiro tem hoje mais radares do que São Paulo: são 979 equipamentos. Um deles está bem no fim da Via 9, forçando os motoristas a reduzirem bruscamente. 
+Logo depois, ainda precisam esperar para entrar na rotatória — onde a preferência nem sempre faz sentido.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class='quote'>
+“A gente para por causa do radar e depois fica esperando à toa. O outro lado mal tem carro.”
+<br>— André Luiz, motorista de aplicativo
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("### 💡 O que poderia ser feito?")
 st.write("""
-Segundo dados da Prefeitura do Rio, a cidade tem 979 radares de velocidade — mais até que São Paulo. 
-Um deles está instalado bem no fim da Avenida Balthazar da Silveira, com limite de 40 km/h. 
-Quem passa ali precisa frear, o que já começa a travar o trânsito. E logo em seguida, ainda precisa esperar a vez na rotatória.
+A preferência atual da rotatória considera o fluxo da Avenida Salvador Allende, que raramente congestiona. 
+Moradores sugerem inverter a prioridade ou tirar a placa de “PARE” do lado errado da rotatória, para melhorar a fluidez de quem vem pela Via 9.
 
-Do outro lado da rotatória, tem uma placa de 'PARE' para não travar o fluxo da Avenida Salvador Allende. 
-Mas a Allende quase não tem engarrafamento, então essa preferência acaba prejudicando todo mundo que vem da Via 9.
-""")
-
-st.markdown("> “A gente para por causa do radar e depois fica esperando à toa. O outro lado mal tem carro.” — André Luiz, motorista de aplicativo")
-
-st.markdown("### E agora?")
-st.write("""
-Moradores pedem uma reavaliação da sinalização e da lógica de prioridade na rotatória. 
-Uma simples troca no lado que tem a placa de 'PARE' já poderia melhorar bastante a fluidez no local.
-
-A equipe deste projeto está acompanhando a situação e busca ampliar o debate sobre a mobilidade urbana no bairro. 
+Além disso, a presença de um radar tão próximo à rotatória poderia ser repensada — talvez substituído por outro tipo de controle de velocidade mais inteligente.
 """)
 
 st.markdown("---")
-st.markdown("**Matéria multimídia feita por estudante da disciplina de Jornalismo Multimídia - Bruno Alexandre Rodrigues**")
+st.markdown("📚 **Matéria multimídia feita por estudantes de Jornalismo Multimídia — Bruno Alexandre Rodrigues**")
+
