@@ -19,9 +19,10 @@ st.video("https://youtube.com/shorts/nRz0HaSwQ_M")
 st.video("https://youtube.com/shorts/hedAndSmwdk")
 
 st.markdown("### Onde fica esse trecho?")
-st.image('mapa_recreio_geral.png', caption='Mapa geral do Recreio dos Bandeirantes', use_column_width=True)
-st.image('mapa_balthazar1.png', caption='Avenida Alfredo Balthazar da Silveira e acesso à Salvador Allende', use_column_width=True)
-st.image('mapa_balthazar2.png', caption='Rotatória no fim da Via 9 próxima ao Terminal Recreio', use_column_width=True)
+st.image('mapa_recreio_geral.png', caption='Mapa geral do Recreio dos Bandeirantes', use_container_width=True)
+st.image('mapa_balthazar1.png', caption='Avenida Alfredo Balthazar da Silveira e acesso à Salvador Allende', use_container_width=True)
+st.image('mapa_balthazar2.png', caption='Rotatória no fim da Via 9 próxima ao Terminal Recreio', use_container_width=True)
+
 
 st.markdown("### Fiscalização intensa e fluxo parado")
 st.write("""
