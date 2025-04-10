@@ -5,7 +5,7 @@ st.set_page_config(page_title="Trânsito na Via 9", layout="wide")
 st.markdown("<h1 style='text-align: center;'>Caos na Via 9: como uma obra transformou o trânsito no Recreio</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>Radar, rotatória e sinalização confusa geram congestionamentos todos os dias</h4>", unsafe_allow_html=True)
 
-st.audio('sons_transito_final.mp3', format='audio/mp3', start_time=0)
+#st.audio('sons_transito_final.mp3', format='audio/mp3', start_time=0)
 
 st.markdown("### O que está acontecendo?")
 st.write("""
