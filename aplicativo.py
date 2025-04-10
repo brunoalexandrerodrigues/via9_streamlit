@@ -15,8 +15,8 @@ Uma obra recente da prefeitura colocou uma rotatória e um radar de 40km/h no fi
 
 st.markdown("### Veja como está o trânsito de verdade")
 st.write("Gravamos dois vídeos para mostrar como o trânsito trava na Via 9:")
-st.video("https://youtube.com/shorts/nRz0HaSwQ_M")
-st.video("https://youtube.com/shorts/hedAndSmwdk")
+st.video("https://www.youtube.com/watch?v=nRz0HaSwQ_M")
+st.video("https://www.youtube.com/watch?v=hedAndSmwdk")
 
 st.markdown("### Onde fica esse trecho?")
 st.image('mapa_recreio_geral.png', caption='Mapa geral do Recreio dos Bandeirantes', use_container_width=True)
