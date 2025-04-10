@@ -14,7 +14,6 @@ asfalto_base64 = get_base64_of_image("textura_asfalto.jpg")
 # Layout da página
 st.set_page_config(page_title="Trânsito na Via 9", layout="wide")
 
-# CSS com fundo de asfalto + texto branco com sombra
 st.markdown(f"""
     <style>
         .stApp {{
@@ -22,16 +21,30 @@ st.markdown(f"""
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
+            background-color: #111;  /* fundo lateral escuro */
         }}
+
         h1, h2, h3, h4, h5, h6, p, div, span {{
             color: white !important;
             text-shadow: 1px 1px 3px black;
         }}
-        audio {{
-            margin-bottom: 2rem;
+
+        .element-container:has(figcaption) figcaption {{
+            color: white !important;
+            text-shadow: 1px 1px 3px black;
+            font-size: 0.9rem;
+            padding-top: 4px;
+        }}
+
+        .block-container {{
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: rgba(0, 0, 0, 0.55); /* leve transparência escura para melhorar leitura */
+            border-radius: 12px;
         }}
     </style>
 """, unsafe_allow_html=True)
+
 
      
 # Áudio ambiente
