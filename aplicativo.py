@@ -45,4 +45,4 @@ A equipe deste projeto está acompanhando a situação e busca ampliar o debate 
 """)
 
 st.markdown("---")
-st.markdown("**Matéria multimídia feita por estudantes da disciplina de Jornalismo Multimídia - Bruno Alexandre Rodrigues**")
+st.markdown("**Matéria multimídia feita por estudante da disciplina de Jornalismo Multimídia - Bruno Alexandre Rodrigues**")
